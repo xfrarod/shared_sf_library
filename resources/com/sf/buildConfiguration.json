@@ -1,6 +1,6 @@
 {
   "imagePipeline": "msede25/github-hub:latest",
-  "imageChefdk-knife": "msede25/chefdk_kitchen:latest",
+  "imageChefdk": "msede25/chefdk_kitchen:latest",
   "title": "PR Created Automatically by Jenkins",
   "slack": "https://shutterfly.slack.com/services/hooks/jenkins-ci/"
 }
