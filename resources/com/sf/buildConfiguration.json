@@ -1,0 +1,5 @@
+{
+  "imagePipeline": "msede25/foodcritic_hub:0.11.10",
+  "title": "PR Created Automatically by Jenkins",
+  "slack": "https://shutterfly.slack.com/services/hooks/jenkins-ci/"
+}
