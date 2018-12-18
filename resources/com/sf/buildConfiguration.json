@@ -1,6 +1,7 @@
 {
   "imagePipeline": "msede25/github-hub:latest",
-  "imageChefdk": "msede25/chefdk_kitchen:latest",
+  "imageChefdk": "xfrarod/chef-node:v1",
+  "imageChefServer": "xfrarod/chef-server:v1",
   "title": "PR Created Automatically by Jenkins",
   "slack": "https://shutterfly.slack.com/services/hooks/jenkins-ci/"
 }
