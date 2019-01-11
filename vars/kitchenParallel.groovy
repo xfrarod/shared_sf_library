@@ -1,6 +1,6 @@
-def kitchenParallel() {
+/*def kitchenParallel() {
     this.kitchenParallel(this.getInstances())
-}
+}*/
 
 def call (ArrayList<String> instanceNames) {
     def parallelNodes = [:]
