@@ -8,7 +8,7 @@ def call (ArrayList<String> instanceNames) {
     for (int i = 0; i < instanceNames.size(); i++) {
         def instanceName = instanceNames.get(i)
         parallelNodes["tk-${instanceName}"] = {
-					result = sh(script: 'kitchen test --destroy always ' + instanceName, returnStatus: true)
+					result = sh(script: 'cd cookbook/custom_nginx/; kitchen test --destroy always ' + instanceName, returnStatus: true)
 						if (result != 0) {
 							echo "kitchen returned non-zero exit status"
 							echo "Archiving test-kitchen logs"
