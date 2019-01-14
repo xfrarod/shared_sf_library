@@ -1,10 +1,7 @@
 def call (user, title, tobranch, frombranch, org){
   def COMMIT_MESSAGE = sh(script:'git log -1 --pretty=%B',
       returnStdout: true).trim()
-  def folder = new File("~/.config")
-  if( !folder.exists() ) {
-    folder.mkdirs()
-  }
+  sh "if [ ! -d ~/.config ]; then mkdir ~/.config;fi"
   sh 'echo "github.com:" >> ~/.config/hub'
   sh "echo \"- user: ${user}\" >> ~/.config/hub"
   sh "echo \"  oauth_token: ${env.TOKEN}\" >> ~/.config/hub"
