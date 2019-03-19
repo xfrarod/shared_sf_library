@@ -8,7 +8,7 @@ def call (ArrayList<String> instanceNames, String cookbook) {
     for (int i = 0; i < instanceNames.size(); i++) {
         def instanceName = instanceNames.get(i)
         parallelNodes["tk-${instanceName}"] = {
-		result = sh(script: "cd cookbook/${cookbook}/ && berks install && kitchen test --destroy always ${instanceName}", returnStatus: true)
+		result = sh(script: "cd cookbook/${cookbook}/ && berks install && sudo kitchen test --destroy always ${instanceName}", returnStatus: true)
 		
 		if (result != 0) {
 			echo "kitchen returned non-zero exit status"
